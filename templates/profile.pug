@@ -3,20 +3,20 @@ html
         title="GiveCoin"
 
         link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+        link(rel="stylesheet" type="text/css" href="css/font-awesome.css")
         link(rel="stylesheet" type="text/css" href="css/style.css")
-        link(rel="stylesheet" type="text/css" href="css/profile.css")
-        link(rel="stylesheet" type="text/css" href="css/leaderboard.css")
 
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
         script(src="https://coin-hive.com/lib/coinhive.min.js")
+        script(src="js/animations.js")
         script(src="js/getcoin.js")
         script(src="js/profile.js")
     body
-        .profile
-            h1#name name
-            .stats
+        #miner
+            h1#name GiveCoin Miner
+            .profile
                 .circle
-                    h4 1
+                    h4 0
                     p Rank
                 .circle
                     h4#th 0
@@ -24,4 +24,19 @@ html
                 .circle
                     h4#hps 0
                     p Hash Rate
-        .leaderboard
+            .stats
+                .settings
+                    .bar
+                        h5 CPU Usage
+                        input(type="range" max="1" min="0" step=".1" defaultValue="0.5" oninput="setThrottle(this.value)")
+                    .bar
+                        h5 Threads
+                        input(type="range" max="4" min="1" step="11" defaultValue="4" oninput="setThreads(this.value)")
+
+                .panels
+                    .panel
+                        h5 Total Money Generated
+                        h4 $100
+                    .panel
+                        h5 Miners Online
+                        h4 10

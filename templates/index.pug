@@ -3,15 +3,35 @@ html
         title="GiveCoin"
 
         link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+        link(rel="stylesheet" type="text/css" href="css/font-awesome.css")
         link(rel="stylesheet" type="text/css" href="css/style.css")
-        link(rel="stylesheet" type="text/css" href="css/home.css")
 
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        script(src="js/animations.js")
     body
-        .home
+        #home
             h1 GiveCoin
-            form(action="./profile.html" method="get")
-                input(type="text" name="q" placeholder="Enter a name here" autofocus autocomplete="off")
-            .information
-                .box
-                    h3 Mine cryptocurrencies
+            .totaldonated
+                h2 $100
+                h3 donated
+            button(onclick="window.location='profile.html';") Start
+            .scrolldown(onclick="scrolldown()")
+                h3 Learn more
+                .fa.fa-caret-down
+        #information
+            .box
+                .box-content
+                    h1 How It Works
+                    ol
+                        li Run our miner in your browser
+                        li Mine monero
+                        li Generate money for charities
+                img(src="img/howitworks.png")
+            .box
+                .box-content
+                    h1 Monthly Charity
+                    h2 We have a new charity we donate to every month.
+            .box
+                .box-content
+                    h1 Our History
+                    h2 We have just launched! Help us add a charity here.

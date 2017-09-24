@@ -1,0 +1,84 @@
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    min-height: 200px;
+    h1{
+        font-size: 3.0em;
+    }
+
+    .totaldonated{
+        margin: 5vh auto;
+        display: flex;
+        flex-direction: row;
+        h2{
+            padding: 10px;
+            margin-right: 10px;
+            background: rgba(255,255,255,0.3);
+            font-size: 2.5em;
+        }
+        h3{
+            position: relative;
+            top:1em;
+            font-size: 1.5em;
+        }
+    }
+    button{
+        margin: 0 auto;
+        padding: 20px 40px;
+        border-radius: 40vw;
+        border: none;
+        font-size: 1.5em;
+        text-align: center;
+        background: rgba(255,255,255,0.5);
+        &:hover{
+            box-shadow: 0 0 20px #EEEEEE;
+            cursor: pointer;
+        }
+    }
+    .scrolldown{
+        width: 100%;
+        position:absolute;
+        bottom: 20px;
+        font-size:  1.5em;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+#information{
+    .box{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .box-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                border-bottom: 1px solid black;
+                padding-bottom:5px;
+                font-size: 2.0em;
+            }
+            li{
+                margin: 10px 0;
+                font-size: 1.5em;
+            }
+            h2{
+                margin: 10px 0;
+                font-weight: 400;
+                font-size: 2.0em;
+            }
+        }
+        img{
+            margin: auto 0;
+            height: 50%;
+        }
+    }
+}
